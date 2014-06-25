@@ -1,0 +1,90 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	color: black;
+	background-color: #EEE;
+}
+
+p {
+	color: black;
+}
+
+a {
+	color: inherit;
+	border-bottom: 1px dashed #00BFFF;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #00BFFF;
+}
+
+.heading {
+	font-size: 20pt;
+	font-family: 'Monda', sans-serif;
+}
+
+.subheading {
+	font-size: 16pt;
+	font-family: 'Monda', sans-serif;
+}
+
+header {
+	width: 100%;
+	border-bottom: 2px solid #00BFFF;
+	font-family: 'Monda', sans-serif;
+	background-color: #333;
+	font-size: 16pt;
+}
+
+nav {
+	display: table;
+}
+
+header span {
+	font-size: 24pt;
+}
+
+header a {
+	display: table-cell;
+	text-decoration: none;
+	border-bottom: 0;
+	color: white;
+	font-weight: bold;
+	width: auto;
+	padding: 0 15px 2px 10px;
+}
+
+header a:hover, header a:active {
+	background-color: #444;
+	cursor: pointer;
+}
+
+header a:hover, header a:active {
+	color: #FFF;
+}
+
+#wrapper {
+	width: 80%;
+	min-width: 640px;
+	min-height: 200px;
+	padding: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 1px solid #223;
+}
+
+.horizontalSeparator {
+	background-color: #223;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 1px;
+}
+
+footer p {
+	color: #777;
+	margin: 5px 20px;
+	text-align: right;
+}

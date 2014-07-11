@@ -2,9 +2,99 @@
 <html>
 <head>
  <meta charset="utf-8">
-	<title>Projects | Nathan Essex</title>
+	<title>Snake 4.01 | Nathan Essex</title>
 	<link rel="stylesheet" href="/css/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Monda' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		#snakeWrapper {
+		    position: relative;
+		    width: 640px;
+		    height: 400px;
+		    color: #000;
+		}
+
+		#map {
+		    position: relative;
+		    background-color: #CFC;
+		    text-align: center;
+		    margin: 0 auto;
+		}
+
+		.snakeBody {
+		    position: absolute;
+		    margin: 0;
+		    padding: 0;
+		    top: 0;
+		    left: 0;
+		    width: 10px;
+		    height: 10px;
+		    background-color: #000;
+		    z-index: 1;
+		}
+
+		.snakeBody:last-of-type { 
+		    /*Head of the snake*/
+		}
+
+		.fruit {
+		    position: absolute;
+		    margin: 0;
+		    padding: 0;
+		    top: 0;
+		    left: 0;
+		    width: 10px;
+		    height: 10px;
+		    background-color: #000;
+		}
+
+		#snakeMenu, #snakeGameOver, #snakeOverlay {
+		    position: absolute;
+		    display: none;
+		    width: 100%;
+		    height: 100%;
+		    z-index: 2;
+		}
+
+		#snakeMenu {
+		    background-color: #CFC;
+		    color: #FFF;
+		}
+
+		.snakeMenuHeading, .snakeMenuSubheading, #snakeScoreText {
+		    display: block;
+		    color: #000;
+		    font-size: 26pt;
+		    font-weight: bold;
+		    font-family: sans-serif;
+		    margin-top: 10px;
+		}
+		.snakeMenuSubheading {
+		    font-size: 22pt;
+		}
+
+		#snakeMenuWrapper, #snakeGameOverWrapper { /*Make a .gameOverlayWrapper class?? TODO */
+		    width: 80%;
+		    background-color: #CFC;
+		    text-align: center;
+		    margin: 0 auto;
+		}
+
+		.snakeMenuButton {
+		    background-color: #CFC;
+		    padding: 20px;
+		    font-weight: bold;
+		    font-size: 20pt;
+		    border: 2px dashed #000;
+		}
+
+		.snakeMenuButton:hover, .snakeMenuButton:active {
+		    cursor: pointer;
+		}
+
+		.projectExample {
+			margin-bottom: 20px;
+		}
+	</style>
 </head>
 <body>
 	<header>
@@ -15,12 +105,44 @@
 	</header>
 
 	<div id="wrapper">
+		<p class="heading">Snake 4.01</p>
+		<p><a href="/projects/typingPractice/typingPractice.html" class="styledButton">&lt; Previous Project: Typing Practice with Project Gutenberg</a><a href="/projects/cofftek/cofftek.html" class="styledButton">Next Project: Cofftek.com &gt;</a></p>
 		
-	</div>
+		<div class="horizontalSeparator"></div>
+		
+		<p class="subheading">Overview</p>
+		<p>Snake 4.01 is a JavaScript implementation of the classic Snake arcade game, using only HTML4.01 compliant code.</p>
+		
+		<p class="subheading">Example</p>
+		<div class="projectExample">
+			<!-- !!Start of example!! -->
+			<div id="snakeWrapper">
+				<div id="snakeMenu">
+                    <div id="snakeMenuWrapper">
+                        <span class="snakeMenuHeading">Snake 4.01</span>
+                        <input type="button" value="START" class="snakeMenuButton" id="snakeStartButton">
+                    </div>
+                </div>
+                <div id="snakeGameOver">
+                    <div id="snakeGameOverWrapper">
+                        <span class="snakeMenuHeading" id="snakeFinalScoreHeading">Game Over.</span>
+                        <span class="snakeMenuSubheading" id="snakeFinalScoreText">Score: 0</span>
+                        <input type="button" value="RETRY" class="snakeMenuButton" id="snakeResetButton">
+                    </div>
+                </div>
+			</div>
+            
+			<!-- !!end of example!! -->
+		</div>
+        <div>
+		    <a href="snakeFull.html" class="styledButton">Full Screen</a><a href="https://github.com/Nessex/Snake4.01" class="styledButton">Source (GitHub)</a>
+        </div>
 	
 	<div class="horizontalSeparator"></div>
 	<footer>
 		<p><a href="/sitemap.html">site map</a></p>
 	</footer>
+
+	<script type="text/javascript" src="snake.js"></script>
 </body>
 </html>

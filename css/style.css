@@ -105,3 +105,12 @@ footer p {
 	background-color: #444;
 	color: #FFF;
 }
+
+.messageIndent {
+	padding-left: 2em;
+}
+
+.date {
+	font-size: 12pt;
+	color: #444;
+}

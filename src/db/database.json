@@ -1,0 +1,33 @@
+{
+    "Projects": [
+        {
+            "title": "Typing Practice with Project Gutenberg",
+            "folder": "tppg",
+            "description": "Practice your typing with samples of text from Project Gutenberg books."
+        },
+        {
+            "title": "Cofftek.com",
+            "folder": "cofftek",
+            "description": "Coff-tek website"
+        },
+        {
+            "title": "Primate Password Manager",
+            "folder": "primate",
+            "description": "A password manager built to replace Password Gorilla, built using Node-webkit."
+        },
+        {
+            "title": "Single Character IDN Directory",
+            "folder": "scidn",
+            "description": "A directory listing available single-character International Domain Names."
+        }
+    ],
+
+    "Posts": [
+        {
+            "title": "Hello, world",
+            "id": "hw",
+            "description": "Lorem ipsum dolor sit amet.."
+        }
+    ]
+
+}

@@ -1,0 +1,14 @@
+/* variables and mixins */
+@import url(http://fonts.googleapis.com/css?family=Monda);
+
+@mixin mobile {
+	@media only screen and (max-width: 32rem) {
+		@content;
+	}
+}
+
+@mixin non-mobile {
+	@media only screen and (min-width: 32rem) {
+		@content;
+	}
+}

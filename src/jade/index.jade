@@ -1,0 +1,16 @@
+extends layouts/default
+
+append mainVars
+    - currentPage = 'Projects'
+    - pageTitle = currentPage + ' | Nathan Essex'
+    - metaDesc = 'Web Developer'
+
+block content
+    .content
+        h1 #{currentPage}
+        each project in Projects
+            .projectListing
+                if(project.image)
+                    img(src="#{project.image}")
+                a(href="projects/#{project.folder}/#{project.folder}.html").subheading #{project.title}
+                p #{project.description}

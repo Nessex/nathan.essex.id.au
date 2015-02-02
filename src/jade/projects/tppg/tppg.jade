@@ -1,0 +1,26 @@
+extends ../../layouts/default
+
+append mainVars
+    - currentPage = 'TPPG'
+    - pageTitle = currentPage + ' | Nathan Essex'
+    - metaDesc = 'Web Developer'
+    - currentProject = 'tppg'
+
+block content
+    link(href = '/css/tppg.css', rel = 'stylesheet')
+    .projectContent
+        each project in Projects
+            if project.folder == currentProject
+                p.heading #{project.title}
+        
+        p This project was for a university assessment in which I was to implement a website using only HTML4.01, CSS and JS. Some features which would have been nice had to be excluded because of the technical restrictions, including loading text snippets from a database. 
+        #typingWrapper
+            p#timeTaken
+            input(type="button")#resetBtn
+            p#bookTitle
+            p#typingText
+            p#wordCount
+            p#wpm
+            input(type="text")#typingInput
+
+    script(src = '/js/tppg.js')

@@ -1,0 +1,10 @@
+extends ../layouts/default
+
+append mainVars
+    - currentPage = 'TPPG'
+    - pageTitle = currentPage + ' | Nathan Essex'
+    - metaDesc = 'Web Developer'
+    - currentProject = 'tppg'
+
+block content
+    p #{Posts[0].title}

@@ -1,0 +1,12 @@
+extends layouts/default
+
+append mainVars
+    - currentPage = 'About'
+    - pageTitle = currentPage + ' | Nathan Essex'
+    - metaDesc = 'Web Developer'
+
+block content
+    .content
+        h1 #{currentPage}
+        p Hi I'm Nathan, a software developer and university student from Brisbane, Australia. 
+        a(href="mailto:nathan@essex.id.au") send me an email

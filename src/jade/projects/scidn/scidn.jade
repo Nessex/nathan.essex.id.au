@@ -1,0 +1,17 @@
+extends ../../layouts/default
+
+append mainVars
+    - currentPage = 'Single Character IDN Directory'
+    - pageTitle = currentPage + ' | Nathan Essex'
+    - metaDesc = 'Web Developer'
+    - currentProject = 'scidn'
+
+block content
+    .projectContent
+        each project in Projects
+            if project.folder == currentProject
+                p.heading #{project.title}
+        
+        a(href="https://github.com/Nessex/single-char-idn").link-button source on github
+        p This project is to create a directory site listing all the available single-character International Domain Names with Punycode support.
+        p It is still currently in development.

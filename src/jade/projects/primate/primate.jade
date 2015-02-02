@@ -1,0 +1,17 @@
+extends ../../layouts/default
+
+append mainVars
+    - currentPage = 'Primate'
+    - pageTitle = currentPage + ' | Nathan Essex'
+    - metaDesc = 'Web Developer'
+    - currentProject = 'primate'
+
+block content
+    .projectContent
+        each project in Projects
+            if project.folder == currentProject
+                p.heading #{project.title}
+        
+        a(href="https://github.com/PasswordBanana/primate").link-button source on github
+        p This project was to develop a password manager front-end to manage files created by Password Gorilla. The database management functionality was mostly provided by the libpwsafejs library, and the user interface was built using standard web technologies on the Node-webkit platform.
+        p As this was essentially a web application in a Node-webkit wrapper, effort was made to keep all functionality implemented in JavaScript, rather than falling back to native technologies. This was possible for almost all functionality, with the exception of manipulating the clipboard for copying passwords.

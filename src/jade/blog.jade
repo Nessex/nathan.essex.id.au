@@ -1,0 +1,16 @@
+extends layouts/default
+
+append mainVars
+    - currentPage = 'Blog'
+    - pageTitle = currentPage + ' | Nathan Essex'
+    - metaDesc = 'Web Developer'
+
+block content
+    .content
+        h1 #{currentPage}
+        each post in Posts
+            //- .postListing
+            //-     if(post.image)
+            //-         img(src="#{post.image}")
+            //-     a(href="blog/#{post.id}.html").subheading #{post.title}
+            //-     p #{post.description}

@@ -1,0 +1,17 @@
+extends ../../layouts/default
+
+append mainVars
+    - currentPage = 'Coff-Tek'
+    - pageTitle = currentPage + ' | Nathan Essex'
+    - metaDesc = 'Web Developer'
+    - currentProject = 'cofftek'
+
+block content
+    .projectContent
+        each project in Projects
+            if project.folder == currentProject
+                p.heading #{project.title}
+        
+        a(href="https://github.com/Nessex/cofftek.com").link-button source on github
+        a(href="http://cofftek.com").link-button live website
+        p This project was to overhaul Coff-Tek, a local espresso machine repair business' website. The purpose of this site is primarily to redirect users to other contact details for the business, therefore a clean one-page site was chosen.
